@@ -27,6 +27,12 @@ inputs:
       description: |
         Use this input to specify an emulator skin.
         Value example: `320x480`.
+  - sdcard:
+    opts:
+      title: Emulator sdcard
+      description: |
+        Use this input to specify an emulator sdcard.
+        Value example: `my.img`.
   - android_home: $ANDROID_HOME
     opts:
       title: Android sdk path

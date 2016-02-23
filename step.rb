@@ -111,10 +111,12 @@ if emulator_name.to_s == ''
 end
 
 emulator_skin = ENV['skin']
+emulator_sdcard = ENV['sdcard']
 
 log_info('Configs:')
 log_details("emulator_name: #{emulator_name}")
 log_details("skin: #{emulator_skin}") if emulator_skin.to_s != ''
+log_details("sdcard: #{emulator_sdcard}") if emulator_sdcard.to_s != ''
 
 avd_images = list_of_avd_images
 if avd_images
@@ -154,6 +156,8 @@ begin
 
     params << "-skin #{emulator_skin}" unless emulator_skin.to_s == ''
     params << '-noskin' if emulator_skin.to_s == ''
+
+    params << "-sdcard #{emulator_sdcard}" unless emulator_sdcard.to_s == ''
 
     command = params.join(' ')
 

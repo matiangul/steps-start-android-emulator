@@ -18,6 +18,7 @@ workflows:
         is_always_run: true
         inputs:
         - skin: "768x1280"
+        - sdcard: "my.img"
     - script:
         title: Output test
         is_always_run: true
